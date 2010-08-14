@@ -27,11 +27,29 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+		<repository>
+            <id>b2s</id>
+            <url>http://b2s-repo.googlecode.com/svn/trunk/mvn-repo</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
     </repositories>
 
+	<distributionManagement>
+        <repository>
+            <id>b2s-repo</id>
+            <name>Maven repository of releases</name>
+            <url>dav:https://b2s-repo.googlecode.com/svn/trunk/mvn-repo</url>
+            <uniqueVersion>true</uniqueVersion>
+        </repository>
+    </distributionManagement>
+
+	<scm>
+		<developerConnection>scm:git:git://github.com/born2snipe/nbm-parent.git</developerConnection>
+	</scm>
+
 	<build>
-			<finalName>${artifactId}</finalName>
-		
 	        <plugins>
 	            <plugin>
 	                <groupId>org.codehaus.mojo</groupId>
